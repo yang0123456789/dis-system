@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+​    name: api-gateway
+  cloud:
+​    gateway:
+        routes:
+          -id: gateway-service
+           uri: https://www.baidu.com
+           order: 0
+           predicates:
+  ​            -Query=smile
